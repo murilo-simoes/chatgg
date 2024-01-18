@@ -50,6 +50,33 @@ export const Chat = styled.div`
 `;
 export const DivNome = styled.div`
   width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .infoChat {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: #212121;
+    transition: 0.1s all ease-in;
+
+    &:hover {
+      background-color: #fff;
+
+      .icon {
+        color: #9c0202;
+      }
+    }
+
+    .icon {
+      font-size: 1rem;
+      color: #fff;
+    }
+  }
 `;
 export const Nome = styled.h1`
   color: #fff;
@@ -105,6 +132,8 @@ export const WrapperInputs = styled.form`
 `;
 
 export const DivCentralizada = styled.div`
+  width: 100%;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -76,6 +76,28 @@ const ChatMessages = (chatId) => {
     return <p>Errooooooooo</p>;
   }
 
+  //#region FUNÇÃO PARA FORMATAR DATA
+
+  function formatarData(dataString) {
+    // Cria um objeto Date com a string fornecida
+    const data = new Date(dataString);
+
+    // Obtém os componentes da data (dia, mês e ano)
+    const dia = data.getDate().toString().padStart(2, "0");
+    const mes = (data.getMonth() + 1).toString().padStart(2, "0");
+    // const ano = data.getFullYear().toString();
+
+    // Obtém os componentes do horário (hora, minuto e segundo)
+    const hora = data.getHours().toString().padStart(2, "0");
+    const minuto = data.getMinutes().toString().padStart(2, "0");
+    // const segundo = data.getSeconds().toString().padStart(2, "0");
+
+    // Retorna a data e hora formatadas
+    return `${dia}/${mes} ${hora}:${minuto}`;
+  }
+
+  //#endregion
+
   return (
     <ContainerTexts>
       <WrapperTexts>
@@ -90,7 +112,10 @@ const ChatMessages = (chatId) => {
                   <WrapperMessage
                     color={item.sendId === user.id ? "#7a0101" : "#383737"}
                   >
-                    <p>{item.message}</p>
+                    <p className="textoMensagem">{item.message}</p>
+                    <p className="dataMensagem">
+                      {formatarData(item.createdAt.toString())}
+                    </p>
                   </WrapperMessage>
                 </LineMessage>
               );

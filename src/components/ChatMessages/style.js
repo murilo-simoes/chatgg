@@ -49,9 +49,7 @@ export const WrapperTexts = styled.div`
 
 export const WrapperChatSend = styled.form`
   width: 100%;
-  height: auto;
-  max-height: 200px;
-  min-height: 12.5dvh;
+  height: 12.5dvh;
   position: relative;
   background-color: #2e2e2e;
   display: flex;
@@ -62,7 +60,6 @@ export const WrapperChatSend = styled.form`
 export const SendInput = styled.input`
   width: 80%;
   height: 40%;
-  max-height: 70%;
   background-color: #4f4f4f;
   border: none;
   border-radius: 0.7rem;
@@ -144,12 +141,21 @@ export const LineMessage = styled.div`
 export const WrapperMessage = styled.div`
   padding: 1rem;
   width: auto;
-  max-width: 500px;
+  max-width: 550px;
   background-color: ${({ color }) => (color ? color : "#7a0101")};
   border-radius: 1.4rem;
   border: 2px solid #610101;
 
-  p {
+  .textoMensagem {
     color: #fff;
+    line-height: 1.3;
+    padding-right: 2rem;
+  }
+
+  .dataMensagem {
+    color: gray;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    text-align: right;
   }
 `;

@@ -14,7 +14,10 @@ import { useMutation, useQuery, useQueryClient } from "react-query";
 import { useEffect, useState } from "react";
 import Loading from "../Loading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus as icon } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPlus as icon,
+  faEllipsis as icon2,
+} from "@fortawesome/free-solid-svg-icons";
 import ChatMessages from "../ChatMessages";
 import NoChat from "../NoChat";
 
@@ -132,6 +135,9 @@ const Chats = () => {
                 >
                   <DivNome>
                     <Nome>{item.nomeChat}</Nome>
+                    <div className="infoChat">
+                      <FontAwesomeIcon className="icon" icon={icon2} />
+                    </div>
                   </DivNome>
                 </Chat>
               );
