@@ -20,6 +20,113 @@ export const Container = styled.div`
   border-right: 1px solid #7a0101;
 `;
 
+export const ModalHeaderDiv = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 20%;
+  h1 {
+    color: #eee;
+    font-size: 1.2rem;
+  }
+
+  button {
+    cursor: pointer;
+    border-radius: 1rem;
+    width: 32px;
+    height: 32px;
+    background-color: #4e4e4e;
+    border: none;
+    transition: 0.1s all ease-in;
+    &:hover {
+      scale: 1.1;
+    }
+  }
+  button .icon {
+    font-size: 1.5rem;
+    color: #7a0101;
+  }
+`;
+
+export const ModalBodyFooter = styled.div`
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  button {
+    cursor: pointer;
+    border-radius: 1rem;
+    width: auto;
+    height: 40px;
+    background-color: #6e6e6e;
+    border: none;
+    transition: 0.1s all ease-in;
+    color: #7a0101;
+    font-size: 1rem;
+    font-weight: bold;
+    &:hover {
+      scale: 1.05;
+      color: #eee;
+      background-color: #7a0101;
+    }
+  }
+`;
+
+export const ModalBodyDiv = styled.div`
+  width: 100%;
+  height: 60%;
+  padding-top: 2rem;
+  h1 {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+  .formAdd {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .inputAddGrupo {
+      margin-right: 1rem;
+      padding: 0.5rem;
+      border-radius: 0.4rem;
+      border: none;
+      font-size: 1rem;
+    }
+    .infoChat {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+      background-color: #212121;
+      transition: 0.1s all ease-in;
+
+      &:hover {
+        cursor: pointer;
+        scale: 1.1;
+      }
+
+      .icon {
+        font-size: 1rem;
+        color: #fff;
+      }
+    }
+  }
+`;
+
+export const ModalContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+`;
 export const WrapperChats = styled.div`
   width: 100%;
   height: 100%;
@@ -39,21 +146,10 @@ export const WrapperChats = styled.div`
 `;
 export const Chat = styled.div`
   width: 100%;
-  cursor: pointer;
-  height: 60px;
-  border: ${({ color }) => (color ? color : "3px solid #fff")};
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-  border-radius: 1rem;
-`;
-export const DivNome = styled.div`
-  width: 90%;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-
+  margin-top: 1rem;
   .infoChat {
     width: 40px;
     height: 40px;
@@ -65,11 +161,8 @@ export const DivNome = styled.div`
     transition: 0.1s all ease-in;
 
     &:hover {
-      background-color: #fff;
-
-      .icon {
-        color: #9c0202;
-      }
+      cursor: pointer;
+      scale: 1.1;
     }
 
     .icon {
@@ -77,6 +170,17 @@ export const DivNome = styled.div`
       color: #fff;
     }
   }
+`;
+export const DivNome = styled.div`
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  height: 60px;
+  cursor: pointer;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  border: ${({ color }) => (color ? color : "3px solid #fff")};
+  align-items: center;
 `;
 export const Nome = styled.h1`
   color: #fff;

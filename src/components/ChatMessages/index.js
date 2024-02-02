@@ -132,7 +132,7 @@ const ChatMessages = (chatId) => {
       <WrapperChatSend onSubmit={SendMessage}>
         <SendInput
           onChange={(e) => setMensagem(e.target.value)}
-          value={mensagem}
+          value={mensagem || ""}
           placeholder="Escrever mensagem"
         />
         <SendButton onClick={SendMessage}>

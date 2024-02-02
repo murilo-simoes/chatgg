@@ -23,7 +23,7 @@ export const WrapperTexts = styled.div`
   height: 87.5dvh;
   display: flex;
   justify-content: flex-start;
-  flex-direction: column;
+  flex-direction: column-reverse;
   overflow-y: auto;
   align-items: center;
   background-image: url("https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/pattern-4.svg");
